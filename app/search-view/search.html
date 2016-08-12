@@ -1,0 +1,35 @@
+<div>
+  <div class="search-bar-container"><form ng-submit="submit(query)"><a href="#/home"><img class="search-bar-logo" src="***Link to Logo***"></a> <span class="search-input-container"><input ng-model="query" class="search-bar" type="text" placeholder="Search..."><button class="btn search-bar-button" type="button" value="" ng-click="submit(query, 0, 14)"><i class='fa fa-search' aria-hidden='true'></i></button></span></form></div>
+  <div class="loading-bar"></div>
+  <div class="search-content-container" ng-show="show">
+    <ul class="filter-list-sources">
+      <li ng-class="{activefilter: indexFilter=='all'}"><a href="javascript:;" ng-click="filterSource('all')">All</a></li>
+      <li ng-class="{activefilter: indexFilter=='vision'}"><a href="javascript:;" ng-click="filterSource('vision')">Vision</a></li>
+      <li ng-class="{activefilter: indexFilter=='mantis'}"><a href="javascript:;" ng-click="filterSource('mantis')">Mantis</a></li>
+      <li ng-class="{activefilter: indexFilter=='jira'}"><a href="javascript:;" ng-click="filterSource('jira')">Jira</a></li>
+    </ul><hr>
+    <span class="num-responded">Responded with {{ results.hits.total }} results in {{ results.took }} ms.</span>
+    <span ng-show="results.hits.total == 0"><h4 class="search-error">Unfortunately, your query returned no results.</h4></span>
+    <div ng-repeat="result in results.hits.hits" class="search-result">
+      <a href="{{ result._source.uri }}">{{ result._source.name }}</a><br>
+      <span>{{ result._source.uri_fragment }}</span><br>
+      <p>{{limitFullText(result._source.body, 400)}}</p>
+      <ul class="tags"><li ng-repeat="tag in result._source.tags"><a href="javascript:; "ng-click="submit('tag:'+tag, 0, resultsPerPage)">{{ tag }}</a></li></ul>
+    </div>
+    <nav aria-label="Page navigation">
+      <ul class="pagination" ng-show="results.hits.total > resultsPerPage">
+        <li ng-show="displayBackwards">
+          <a ng-click="submit(query, page-1, resultsPerPage)" href="javascript:;" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li ng-repeat="p in pageRange" ng-class="{active: p == page+1}"><a ng-click="submit(query, p-1, resultsPerPage)" href="javascript:;">{{ p }}</a></li>
+        <li ng-show="displayForwards">
+          <a ng-click="submit(query, page+1, resultsPerPage)" href="javascript:;" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

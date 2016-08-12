@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="seeDK">
+<head>
+  <!--[if lt IE 9]>
+    <style>
+      .browsehappy {
+        font-size: 50px;
+        text-align: center;
+      }
+    </style>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>SeeDK</title>
+  <link rel="shortcut icon" href="http://www.cdkglobal.com/sites/default/files/favicon_0_0.ico" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="search-view/search.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-color/jquery.color.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="app.js"></script>
+  <script src="services/search-service.js"></script>
+  <script src="home-view/home-controller.js"></script>
+  <script src="search-view/search-controller.js"></script>
+</head>
+<body>
+  <ng-view></ng-view>
+</body>
+</html>

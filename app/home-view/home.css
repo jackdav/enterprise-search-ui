@@ -1,0 +1,109 @@
+body {
+  background-color: lightgrey;
+}
+.search-bar-home {
+  margin: 0px;
+  padding: 15px;
+  float: right;
+  border: none;
+  width: 100%
+}
+
+.go-button-home {
+  display: inline;
+  position: relative;
+  border-radius: 0px;
+  height: 100%;
+  width: 50px;
+  background-color: #82C600;
+  margin: 0px;
+  padding: 0px;
+  right: 0px;
+  top: -55px !important;
+  float: right;
+}
+
+.search-form-input-span {
+  display: inline-block;
+  padding-right: 50px;
+  margin: 0px;
+  width: 100%;
+}
+
+.search-form-home {
+  margin-top: 0;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  height: 50px;
+  top: 50%;
+  /*overflow: hidden;*/
+}
+
+.logo-picture {
+  height: 20%;
+  width: 70%;
+  margin-top: 7%;
+  margin-bottom: -2%;
+  margin-left: -3%;
+}
+.cb-slideshow,
+.cb-slideshow:after {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.cb-slideshow:after {
+  content: '';
+  background: transparent;
+}
+.cb-slideshow li {
+  list-style-type: none;
+}
+.cb-slideshow li span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li:nth-child(1) span {
+    background-image: url(img/img5.jpg)
+}
+.cb-slideshow li:nth-child(2) span {
+  background-image: url(img/img3.jpg);
+  animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) span {
+  background-image: url(img/img6.jpg);
+  animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+  background-image: url(img/img4.jpg);
+  animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) span {
+    background-image: url(img/img1.jpg);
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) span {
+  background-image: url(img/img2.jpg);
+  animation-delay: 30s;
+}
+
+@keyframes imageAnimation {
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  8% { opacity: 1; animation-timing-function: ease-out; }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}

@@ -1,0 +1,156 @@
+.search-bar-container {
+  margin: 0px;
+  padding: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #F1F1FF;
+  height: 64px;
+}
+
+.search-input-container {
+  height: 40px;
+  width: 380px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.search-bar {
+  height: 100%;
+  width: 340px;
+  font-size: 18px;
+  margin: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  display: inline;
+  border: none;
+}
+
+.search-bar-logo {
+  margin-left: 16px;
+  margin-right: 10px;
+  height: 14px;
+}
+
+.search-bar-button {
+  margin: 0px;
+  margin-top: -2px;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  border-radius: 0;
+  border-color: grey;
+  border-left: 0;
+  background-color: black;
+  border: none;
+}
+
+.search-bar-button-ie {
+  margin-top: -4px !important;
+}
+
+.search-content-container {
+  margin-top: 24px;
+  margin-left: 9%;
+  margin-right: 9%;
+  max-width: 800px;
+}
+
+.num-responded {
+  color: darkgrey;
+}
+
+.search-result {
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.search-result a {
+  font-size: 20px;
+}
+
+.search-result span {
+  color: black;
+}
+
+.search-result p {
+  margin-top: 1px;
+}
+
+.search-error {
+  margin-top: 16px;
+}
+
+.loading-bar {
+  width: 0%;
+  height: 2px;
+  background-color: #0000FF;
+  margin: 0px;
+  padding: 0px;
+}
+
+.pagination {
+  padding-bottom: 30px;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.tags {
+  list-style-type: none;
+  margin-top: -12px;
+  margin-left: -50px;
+}
+ 
+.tags li {
+  display: inline;
+  padding: 0 10px 0 10px;
+}
+
+.tags li a {
+  font-size: 12px;
+}
+
+.filter-list-sources {
+  list-style-type: none;
+  margin-top: -12px;
+  margin-left: -39px;
+  margin-right: 16px;
+}
+
+.filter-list-sources li {
+  display: inline;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 13px;
+}
+
+.filter-list-sources li a {
+  font-size: 16px;
+  color: darkgrey;
+}
+
+hr {
+  color: darkgrey;
+  width: 100%;
+  margin-top: 0;
+}
+
+.footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  background:#F1F1FF;
+}
+
+.activefilter {
+  color: black;
+  border-bottom: thin solid black;
+}
