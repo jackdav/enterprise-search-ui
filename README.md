@@ -5,11 +5,6 @@ a project that can be implemented to view natural language searches of data stor
 * `npm ~2.15.5`
 * `bower ~1.7.9`
 
-### Download, install, and run the test server
-git clone https://git@stash.cdk.com/~sabod/war-room.githttps://github.com/jackdav/war-room
-cd war-room
-npm start
-
 #### Go to localhost:8000 to view the project
 
 ###### Normalized Data Format:
